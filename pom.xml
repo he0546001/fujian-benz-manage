@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>fujian.benz</groupId>
+  <artifactId>fujian-benz-manage</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+ <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.2.RELEASE</version>
+  </parent>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<mybatis.version>1.2.1</mybatis.version>
+	    <mapper.version>1.1.2</mapper.version>
+	    <pagehelper.version>1.1.2</pagehelper.version>
+	    <fastjson.version>1.2.20</fastjson.version>
+		<poi.version>3.14</poi.version>
+		<persistence.version>1.0</persistence.version>
+		<sqljdbc4.version>4.0</sqljdbc4.version>
+	
+	</properties>
+
+<dependencies>
+       
+       <dependency>
+			<groupId>fujian.benz</groupId>
+			<artifactId>fujian-benz-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+  
+   
+  	<!--  热启动 
+  	 <dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-devtools</artifactId>
+  	</dependency>-->
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+
+    <!--  单元测试 -->
+     <dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-test</artifactId>
+  		<scope>test</scope>
+  	</dependency>
+  	
+  	<!--  json -->
+  	 <dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>${fastjson.version}</version>
+	 </dependency>
+
+      <!--springBoot的aop-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+
+</dependencies>
+
+	<modules>
+		<module>fujian-benz-pojo</module>
+		<module>fujian-benz-mapper</module>
+		<module>fujian-benz-service</module>
+		<module>fujian-benz-web</module>
+		<module>fujian-benz-core</module>
+	</modules>
+</project>

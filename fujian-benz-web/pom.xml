@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fujian.benz</groupId>
+    <artifactId>fujian-benz-manage</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>fujian-benz-web</artifactId>
+
+   <dependencies>
+      
+       <dependency>
+			<groupId>fujian.benz</groupId>
+			<artifactId>fujian-benz-service</artifactId>
+			<version>${version}</version>
+		</dependency>
+  
+        <dependency>
+            <groupId>fujian.benz</groupId>
+			<artifactId>fujian-benz-core</artifactId>
+			<version>${version}</version>
+        </dependency>
+
+      <dependency>
+        <groupId>org.apache.tomcat.embed</groupId>
+        <artifactId>tomcat-embed-jasper</artifactId>
+        <scope>provided</scope>
+      </dependency>
+
+    <!--配置jsp jstl的支持-->
+     <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+     </dependency>
+    
+    <!--数据库驱动-->
+    <dependency>
+        <groupId>com.microsoft.sqlserver</groupId>
+        <artifactId>sqljdbc4</artifactId>
+        <version>${sqljdbc4.version}</version>
+    </dependency>
+
+  </dependencies>
+
+
+
+</project>

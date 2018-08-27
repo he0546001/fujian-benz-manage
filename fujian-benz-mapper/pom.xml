@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>fujian.benz</groupId>
+    <artifactId>fujian-benz-manage</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>fujian-benz-mapper</artifactId>
+
+  <dependencies>
+       
+       <dependency>
+			<groupId>fujian.benz</groupId>
+			<artifactId>fujian-benz-pojo</artifactId>
+			<version>${version}</version>
+		</dependency>
+		
+     <!-- spring-boot mybatis依赖：-->
+	  <dependency>
+		    <groupId>org.mybatis.spring.boot</groupId>
+		    <artifactId>mybatis-spring-boot-starter</artifactId>
+		    <version>${mybatis.version}</version>
+		</dependency>
+	
+	<!--mapper -->
+	<dependency>
+		<groupId>tk.mybatis</groupId>
+		<artifactId>mapper-spring-boot-starter</artifactId>
+		<version>${mapper.version}</version>
+	</dependency>
+	
+	  
+	   <!-- 分页助手 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+        
+  
+  </dependencies>
+
+
+
+
+
+
+
+</project>

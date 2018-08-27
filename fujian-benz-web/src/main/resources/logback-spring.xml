@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="false">
+ <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->  
+    <property name="LOG_HOME" value="F:" />  
+  
+  
+  <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+     
+    <encoder>
+      <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+
+     <!-- 输出错误日志到文件 -->
+    <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>  <!--//打印error-->
+        </filter>
+        <encoder>
+            <pattern>
+                %msg%n
+            </pattern>
+        </encoder>
+        <!--滚动策略-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--路径-->
+            <fileNamePattern>${LOG_HOME}\fujian-error\%d{yyyy-MM,aux}\%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+   
+         <layout class="ch.qos.logback.classic.PatternLayout">
+               <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} -%msg%n    
+               </Pattern>
+          </layout>
+   
+    </appender>
+
+    <root level="error">
+        <appender-ref ref="fileErrorLog" />
+    </root>
+
+ <root level="info">
+        <appender-ref ref="stdout" />
+    </root>
+
+</configuration>
