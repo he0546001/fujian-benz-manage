@@ -1,18 +1,20 @@
 package fujian.benz.test1;
 
 
-import com.github.pagehelper.PageInfo;
-import fujian.benz.manage.Application;
-import fujian.benz.manage.pojo.Role;
-import fujian.benz.manage.service.impl.RoleServiceImpl;
+import java.util.Date;
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Date;
-import java.util.List;
+import com.github.pagehelper.PageInfo;
+
+import fujian.benz.manage.Application;
+import fujian.benz.manage.pojo.Role;
+import fujian.benz.manage.service.RoleService;
 
 /**
  * Created by john on 2018/8/23.
@@ -22,7 +24,7 @@ import java.util.List;
 public class Test1 {
 
     @Autowired
-    private RoleServiceImpl roleService;
+    private RoleService roleService;
 
     @Test
     public void test333(){
